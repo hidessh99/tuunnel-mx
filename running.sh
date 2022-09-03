@@ -1,8 +1,8 @@
 #!/bin/bash
 # Welcome Information
 # Edition : Stable Edition V1.0
-# Auther  : AWALUDIN FERIYANTO
-# (C) Copyright 2021-2022 By FSIDVPN
+# Auther  : BAGOES VPN
+# (C) Copyright 2021-2022 By BAGOESVPN
 # =========================================
 
 # // Exporting Language to UTF-8
