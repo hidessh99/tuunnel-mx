@@ -22,7 +22,7 @@ BURIQ () {
 }
 # https://raw.githubusercontent.com/sibeesans/tuunnel-mx/main/main/allow 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/sibeesans/tuunnel-mx/perizinan/main/main/allow | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/sibeesans/tuunnel-mx/main/main/allow | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -234,7 +234,7 @@ sleep 2
 clear
 wget https://raw.githubusercontent.com/sibeesans/tuunnel-mx/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 wget https://raw.githubusercontent.com/sibeesans/tuunnel-mx/main/bckp/set-br.sh && chmod +x set-br.sh && ./set-br.sh
-wget https://raw.githubusercontent.com/sibeesans/tuunnel-mxmain/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
+wget https://raw.githubusercontent.com/sibeesans/tuunnel-mx/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 #wget https://raw.githubusercontent.com/sibeesans/tuunnel-mx/main/xolpanel.sh && chmod +x xolpanel.sh && ./xolpanel.sh
 clear
 cat> /root/.profile << END
