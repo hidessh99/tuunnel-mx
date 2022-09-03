@@ -4,7 +4,7 @@ biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
 
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com//sibeesans/tuunnel-mx/main/main/allow > /root/tmp
+    curl -sS https://raw.githubusercontent.com/sibeesans/tuunnel-mx/main/main/allow > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -68,7 +68,7 @@ cd
 MYIP=$(curl -sS ipv4.icanhazip.com)
 NameUser=$(curl -sS https://raw.githubusercontent.com//sibeesans/tuunnel-mx/main/main/allow | grep $MYIP | awk '{print $2}')
 
-cekdata=$(curl -sS https://raw.githubusercontent.com///sibeesans/tuunnel-mx/userbackup/main/$NameUser/$NameUser.zip | grep 404 | awk '{print $1}' | cut -d: -f1)
+cekdata=$(curl -sS https://raw.githubusercontent.com/sibeesans/tuunnel-mx/userbackup/main/$NameUser/$NameUser.zip | grep 404 | awk '{print $1}' | cut -d: -f1)
 
 [[ "$cekdata" = "404" ]] && {
 red "Data not found / you never backup"
@@ -80,7 +80,7 @@ green "Data found for username $NameUser"
 echo -e "[ ${green}INFO${NC} ] • Restore Data..."
 read -rp "Password File: " -e InputPass
 echo -e "[ ${green}INFO${NC} ] • Downloading data.."
-wget -q -O /root/backup/backup.zip "https://raw.githubusercontent.com//sibeesans./userbackup/main/$NameUser/$NameUser.zip" &> /dev/null
+wget -q -O /root/backup/backup.zip "https://raw.githubusercontent.com/sibeesans./userbackup/main/$NameUser/$NameUser.zip" &> /dev/null
 echo -e "[ ${green}INFO${NC} ] • Getting your data..."
 unzip -P $InputPass /root/backup/backup.zip &> /dev/null
 echo -e "[ ${green}INFO${NC} ] • Starting to restore data..."
