@@ -22,7 +22,7 @@ BURIQ () {
 }
 # https://raw.githubusercontent.com/sibeesans/tuunnel-mx/main/main/allow 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/sibeesans/tuunnel-mx/main/main/allow | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/sibeesans/tuunnel-mx/perizinan/main/main/allow | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -262,7 +262,7 @@ if [ ! -f "/etc/log-create-user.log" ]; then
 echo "Log All Account " > /etc/log-create-user.log
 fi
 history -c
-serverV=$( curl -sS https://raw.githubusercontent.com/sibeesans/tuunnel-mx/main/versi  )
+serverV=$( curl -sS https://raw.githubusercontent.com/sibeesans/tuunnel-mx/swip/main/versi  )
 echo $serverV > /opt/.ver
 aureb=$(cat /home/re_otm)
 b=11
@@ -274,7 +274,7 @@ gg="AM"
 fi
 curl -sS ifconfig.me > /etc/myipvps
 echo " "
-echo "=====================-[ bagoesvpn ]-===================="
+echo "=====================-[ Bagoes vpn ]-===================="
 echo ""
 echo "------------------------------------------------------------"
 echo ""
@@ -316,7 +316,8 @@ echo ""
 echo ""
 echo "------------------------------------------------------------"
 echo ""
-echo "===============-[ Script Created By bagoesvpn
+echo "===============-[ Bagoes Vpn ]-==============="
+echo -e ""
 echo ""
 echo "" | tee -a log-install.txt
 rm /root/cf.sh >/dev/null 2>&1
@@ -332,7 +333,6 @@ exit 0
 else
 reboot
 fi
-
 
 
 
