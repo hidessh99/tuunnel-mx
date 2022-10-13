@@ -5,21 +5,6 @@ green='\e[0;32m'
 yell='\e[1;33m'
 tyblue='\e[1;36m'
 NC='\e[0m'
-purple() { echo -e "\\033[35;1m${*}\\033[0m"; }
-tyblue() { echo -e "\\033[36;1m${*}\\033[0m"; }
-yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
-green() { echo -e "\\033[32;1m${*}\\033[0m"; }
-red() { echo -e "\\033[31;1m${*}\\033[0m"; }
-cd /root
-#System version number
-if [ "${EUID}" -ne 0 ]; then
-		echo "You need to run this script as root"
-		exit 1
-fi
-if [ "$(systemd-detect-virt)" == "openvz" ]; then
-		echo "OpenVZ is not supported"
-		exit 1
-fi
 
 localip=$(hostname -I | cut -d\  -f1)
 hst=( `hostname` )
@@ -48,19 +33,6 @@ echo -ne "[ ${green}INFO${NC} ] Check permission : "
 
 mkdir -p /var/lib/scrz-prem >/dev/null 2>&1
 echo "IP=" >> /var/lib/scrz-prem/ipvps.conf
-
-if [ -f "/etc/xray/domain" ]; then
-echo ""
-echo -e "[ ${green}INFO${NC} ] Script Already Installed"
-echo -ne "[ ${yell}WARNING${NC} ] Do you want to install again ? (y/n)? "
-read answer
-if [ "$answer" == "${answer#[Yy]}" ] ;then
-rm setup.sh
-sleep 10
-exit 0
-else
-clear
-fi
 
 
 wget -q https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/tools.sh;chmod +x tools.sh;./tools.sh
@@ -149,19 +121,4 @@ echo ""
 echo "------------------------------------------------------------"
 echo ""
 echo "===============-[ Script Created By MDX CHANNEL ]-==============="
-echo -e ""
-echo ""
-echo "" | tee -a log-install.txt
-rm /root/cf.sh >/dev/null 2>&1
-rm /root/setup.sh >/dev/null 2>&1
-rm /root/insshws.sh >/dev/null 2>&1
-secs_to_human "$(($(date +%s) - ${start}))" | tee -a log-install.txt
-echo -e "
-"
-echo -ne "[ ${yell}WARNING${NC} ] Do you want to reboot now ? (y/n)? "
-read answer
-if [ "$answer" == "${answer#[Yy]}" ] ;then
-exit 0
-else
-reboot
-fi
+clear
