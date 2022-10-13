@@ -1,5 +1,5 @@
 [Unit]
-Description=Websocket-OpenSSH By MDX CHANNEL
+Description=Websocket-OpenSSH By HideSSH
 Documentation=https://google.com
 After=network.target nss-lookup.target
 
