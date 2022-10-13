@@ -61,7 +61,7 @@ exit 0
 else
 clear
 fi
-fi
+
 
 wget -q https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/tools.sh;chmod +x tools.sh;./tools.sh
 rm tools.sh
