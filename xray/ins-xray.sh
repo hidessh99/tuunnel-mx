@@ -491,8 +491,6 @@ systemctl restart nginx
 systemctl enable runn
 systemctl restart runn
 
-https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/xray/add-ws.sh
-
 wget -q -O /usr/bin/add-ws "https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/xray/add-ws.sh" && chmod +x /usr/bin/add-ws
 wget -q -O /usr/bin/add-vless "https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/xray/add-vless.sh" && chmod +x /usr/bin/add-vless
 wget -q -O /usr/bin/add-tr "hhttps://raw.githubusercontent.com/hidessh99/tuunnel-mx//main/xray/add-tr.sh" && chmod +x /usr/bin/add-tr
