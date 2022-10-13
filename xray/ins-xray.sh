@@ -493,7 +493,7 @@ systemctl restart runn
 
 wget -q -O /usr/bin/add-ws "https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/xray/add-ws.sh" && chmod +x /usr/bin/add-ws
 wget -q -O /usr/bin/add-vless "https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/xray/add-vless.sh" && chmod +x /usr/bin/add-vless
-wget -q -O /usr/bin/add-tr "hhttps://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/xray/add-tr.sh" && chmod +x /usr/bin/add-tr
+wget -q -O /usr/bin/add-tr "https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/xray/add-tr.sh" && chmod +x /usr/bin/add-tr
 wget -q -O /usr/bin/del-user "https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/xray/del-ws.sh" && chmod +x /usr/bin/del-user
 wget -q -O /usr/bin/cek-user "https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/xray/cek-ws.sh" && chmod +x /usr/bin/cek-ws
 wget -q -O /usr/bin/renew-user "https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/xray/renew-ws.sh" && chmod +x /usr/bin/renew-user
