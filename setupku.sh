@@ -105,44 +105,7 @@ wget https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/sshws/insshws.s
 #wget https://raw.githubusercontent.com/kmardhex/swip/main/bckp/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 #wget https://raw.githubusercontent.com/kmardhex/swip/main/xolpanel.sh && chmod +x xolpanel.sh && ./xolpanel.sh
 clear
-cat> /root/.profile << END
-# ~/.profile: executed by Bourne-compatible login shells.
 
-if [ "$BASH" ]; then
-  if [ -f ~/.bashrc ]; then
-    . ~/.bashrc
-  fi
-fi
-
-mesg n || true
-clear
-menu
-END
-chmod 644 /root/.profile
-
-if [ -f "/root/log-install.txt" ]; then
-rm /root/log-install.txt > /dev/null 2>&1
-fi
-if [ -f "/etc/afak.conf" ]; then
-rm /etc/afak.conf > /dev/null 2>&1
-fi
-if [ ! -f "/etc/log-create-user.log" ]; then
-echo "Log All Account " > /etc/log-create-user.log
-fi
-history -c
-
-#serverV=$( curl -sS https://raw.githubusercontent.com/kmardhex/swip/main/versi  )
-#echo $serverV > /opt/.ver
-#aureb=$(cat /home/re_otm)
-b=11
-if [ $aureb -gt $b ]
-then
-gg="PM"
-else
-gg="AM"
-fi
-curl -sS ifconfig.me > /etc/myipvps
-echo " "
 echo "=====================-[ MDX CHANNEL ]-===================="
 echo ""
 echo "------------------------------------------------------------"
