@@ -17,10 +17,10 @@ locality=none
 organization=none
 organizationalunit=none
 commonname=none
-email=admin@bahenol
+email=admin@hidessh.com
 
 # simple password minimal
-curl -sS https://raw.githubusercontent.com/kmardhex/swip/main/ssh/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
+wget -O /etc/pam.d/common-password "https://gitlab.com/hidessh/baru/-/raw/main/password"
 chmod +x /etc/pam.d/common-password
 
 # go to root
@@ -244,7 +244,7 @@ echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 # banner /etc/issue.net
 sleep 1
 echo -e "[ ${green}INFO$NC ] Settings banner"
-wget -q -O /etc/issue.net "https://raw.githubusercontent.com/kmardhex/swip/main/issue.net"
+wget -q -O /etc/issue.net "https://gitlab.com/hidessh/baru/-/raw/main/banner.conf"
 chmod +x /etc/issue.net
 echo "Banner /etc/issue.net" >> /etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
@@ -255,7 +255,7 @@ cat> /etc/issue.net << END
 END
 
 #install bbr dan optimasi kernel
-wget https://raw.githubusercontent.com/apih46/mini/main/ssh/bbr.sh && chmod +x bbr.sh && ./bbr.sh
+#wget https://raw.githubusercontent.com/apih46/mini/main/ssh/bbr.sh && chmod +x bbr.sh && ./bbr.sh
 
 # blockir torrent
 iptables -A FORWARD -m string --string "get_peers" --algo bm -j DROP
@@ -276,17 +276,14 @@ netfilter-persistent reload
 
 # download script
 cd /usr/bin
-wget -O usernew "https://raw.githubusercontent.com/kmardhex/swip/main/ssh/usernew.sh"
-wget -O hapus "https://raw.githubusercontent.com/kmardhex/swip/main/ssh/hapus.sh"
-wget -O member "https://raw.githubusercontent.com/kmardhex/swip/main/ssh/member.sh"
-wget -O renew "https://raw.githubusercontent.com/kmardhex/swip/main/ssh/renew.sh"
-wget -O cek "https://raw.githubusercontent.com/kmardhex/swip/main/ssh/cek.sh"
-wget -O add-host "https://raw.githubusercontent.com/kmardhex/swip/main/ssh/add-host.sh"
-wget -O speedtest "https://raw.githubusercontent.com/kmardhex/swip/main/ssh/speedtest_cli.py"
-wget -O xp "https://raw.githubusercontent.com/kmardhex/swip/main/ssh/xp.sh"
-wget -O asu "https://raw.githubusercontent.com/kmardhex/swip/main/asu.sh"
-wget -O menu "https://raw.githubusercontent.com/kmardhex/swip/main/menu.sh"
-wget -O sshws "https://raw.githubusercontent.com/kmardhex/swip/main/ssh/sshws.sh"
+wget -O usernew "https://gitlab.com/hidessh/baru/-/raw/main/usernew.sh"
+wget -O hapus "https://gitlab.com/hidessh/baru/-/raw/main/delete.sh"
+wget -O member "https://gitlab.com/hidessh/baru/-/raw/main/member.sh"
+wget -O renew "https://gitlab.com/hidessh/baru/-/raw/main/renew.sh"
+wget -O speedtest "https://gitlab.com/hidessh/baru/-/raw/main/speedtest_cli.py"
+wget -O xp "https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/ssh/xp.sh"
+wget -O menu "https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/menu.sh"
+wget -O sshws "https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/ssh/sshws.sh"
 chmod +x usernew
 chmod +x menu
 chmod +x hapus
