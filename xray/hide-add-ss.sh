@@ -49,7 +49,7 @@ echo $cipher:$uuid > /tmp/log
 shadowsocks_base64=$(cat /tmp/log)
 echo -n "${shadowsocks_base64}" | base64 > /tmp/log1
 shadowsocks_base64e=$(cat /tmp/log1)
-shadowsockslink="ss://${shadowsocks_base64e}@$domain:$tls?plugin=xray-plugin;mux=0;path=/ss-ws;host=$domain;tls#${user}"
+shadowsockslink="ss://${shadowsocks_base64e}@$domain:$tls?plugin=xray-plugin;mux=0;path=/hidessh-ss-ws;host=$domain;tls#${user}"
 shadowsockslink1="ss://${shadowsocks_base64e}@$domain:$tls?plugin=xray-plugin;mux=0;serviceName=ss-grpc;host=$domain;tls#${user}"
 systemctl restart xray
 rm -rf /tmp/log
@@ -282,7 +282,7 @@ echo -e "Port  GRPC : ${tls}" | tee -a /etc/log-create-user.log
 echo -e "Password : ${uuid}" | tee -a /etc/log-create-user.log
 echo -e "Cipers : aes-128-gcm" | tee -a /etc/log-create-user.log
 echo -e "Network : ws/grpc" | tee -a /etc/log-create-user.log
-echo -e "Path : /ss-ws" | tee -a /etc/log-create-user.log
+echo -e "Path : /hidessh-ss-ws" | tee -a /etc/log-create-user.log
 echo -e "ServiceName : ss-grpc" | tee -a /etc/log-create-user.log
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo -e "Link TLS : ${shadowsockslink}" | tee -a /etc/log-create-user.log
