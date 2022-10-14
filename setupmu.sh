@@ -28,7 +28,7 @@ apt install git curl -y >/dev/null 2>&1
 apt install python -y >/dev/null 2>&1
 echo -e "[ ${green}INFO${NC} ] Aight good ... installation file is ready"
 sleep 2
-echo -ne "[ ${green}INFO${NC} ] Check permission : "
+
 
 mkdir -p /var/lib/scrz-prem >/dev/null 2>&1
 echo "IP=" >> /var/lib/scrz-prem/ipvps.conf
