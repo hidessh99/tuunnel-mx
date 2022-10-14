@@ -53,7 +53,6 @@ touch /var/log/xray/error2.log
 bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install -u www-data --version 1.5.6
 
 
-
 ## crt xray
 systemctl stop nginx
 mkdir /root/.acme.sh
@@ -96,8 +95,7 @@ cat > /etc/xray/config.json << END
       },
       "tag": "api"
     },
-
-   {
+    {
      "listen": "127.0.0.1",
      "port": "14016",
      "protocol": "vless",
@@ -219,7 +217,6 @@ cat > /etc/xray/config.json << END
           }
         }
      },
-
      {
         "listen": "127.0.0.1",
      "port": "33456",
@@ -240,7 +237,6 @@ cat > /etc/xray/config.json << END
          }
       }
    },
-
    {
     "listen": "127.0.0.1",
     "port": "30310",
@@ -263,7 +259,6 @@ cat > /etc/xray/config.json << END
        }
     }	
   ],
-
   "outbounds": [
     {
       "protocol": "freedom",
@@ -495,6 +490,14 @@ systemctl restart nginx
 systemctl enable runn
 systemctl restart runn
 
+wget -q -O /usr/bin/add-ws "https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/xray/add-ws.sh" && chmod +x /usr/bin/add-ws
+wget -q -O /usr/bin/add-vless "https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/xray/add-vless.sh" && chmod +x /usr/bin/add-vless
+wget -q -O /usr/bin/add-tr "https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/xray/add-tr.sh" && chmod +x /usr/bin/add-tr
+wget -q -O /usr/bin/del-user "https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/xray/del-ws.sh" && chmod +x /usr/bin/del-user
+wget -q -O /usr/bin/cek-user "https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/xray/cek-ws.sh" && chmod +x /usr/bin/cek-ws
+wget -q -O /usr/bin/renew-user "https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/xray/renew-ws.sh" && chmod +x /usr/bin/renew-user
+wget -q -O /usr/bin/crtv2ray "https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/xray/crt.sh" && chmod +x /usr/bin/crtv2ray
+wget -q -O /usr/bin/add-ssws "https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/xray/add-ssws.sh" && chmod +x /usr/bin/add-ssws
 sleep 1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
 yellow "xray/Vmess"
