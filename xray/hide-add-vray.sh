@@ -60,7 +60,7 @@ asu=`cat<<EOF
       "net": "ws",
       "path": "/hidessh-vmess",
       "type": "none",
-      "host": "{domain}",
+      "host": "${domain}",
       "tls": "tls"
 }
 EOF`
@@ -75,7 +75,7 @@ ask=`cat<<EOF
       "net": "ws",
       "path": "/hidessh-vmess",
       "type": "none",
-      "host": "{domain}",
+      "host": "${domain}",
       "tls": "none"
 }
 EOF`
@@ -90,7 +90,7 @@ grpc=`cat<<EOF
       "net": "grpc",
       "path": "vmess-grpc",
       "type": "none",
-      "host": "{domain}",
+      "host": "${domain}",
       "tls": "tls"
 }
 EOF`
