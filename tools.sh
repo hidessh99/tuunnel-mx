@@ -23,8 +23,8 @@ echo "Progress..."
 sleep 2
 
 sudo apt update -y
-sudo apt update -y
-sudo apt dist-upgrade -y
+#sudo apt update -y
+#sudo apt dist-upgrade -y
 sudo apt-get remove --purge ufw firewalld -y 
 sudo apt-get remove --purge exim4 -y 
 sudo apt-get remove apache2 -y 
