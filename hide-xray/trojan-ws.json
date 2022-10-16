@@ -17,7 +17,7 @@
         "settings": {
             "decryption": "none",
             "clients": [{
-                "password": "${uuid}"
+                "password": "xxxxxxxxx"
             }],
             "udp": true
         },
