@@ -39,6 +39,7 @@ rm tools.sh
 clear
 #wget -q "https://raw.githubusercontent.com/kmardhex/swip/main/ssh/cf.sh" && chmod +x cf.sh && ./cf.sh
 clear
+yellow "Add Domain for vmess/vless/trojan dll"
 echo " "
 read -rp "Input ur domain : " -e pp
     if [ -z $pp ]; then
@@ -67,6 +68,7 @@ echo -e "$green          Install XRAY              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
+
 
 wget https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/xray/belajar-xray.sh && chmod +x belajar-xray.sh && ./belajar-xray.sh
 wget https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
