@@ -85,43 +85,49 @@ fi
 
 mkdir - p / home / vps / public_html
 
-# set uuid
-uuid = $(cat / proc / sys / kernel / random / uuid)# xray config
+#set uuid
+uuid=$(cat /proc/sys/kernel/random/uuid);
+uuid2="s/xxxxxxxxx/$uuid/g";
 
 #json vmess wss port 23456
 wget -O /etc/xray/vmess-ws.json https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/hide-xray/vmess-ws.json && chmod +x /etc/xray/vmess-ws.json
 wget -O /etc/systemd/system/vmess-ws.service https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/hide-xray/service/vmess-ws.service && chmod +x /etc/systemd/system/vmess-ws.service
-
+sed -i $uuid2 /etc/xray/vmess-ws.json
 
 #json vmess gprc port 31234
 wget -O /etc/xray/vmess-grpc.json https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/hide-xray/vmess-grpc.json && chmod +x /etc/xray/vmess-grpc.json
 wget -O /etc/systemd/system/vmess-grpc.service https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/hide-xray/service/vmess-grpc.service && chmod +x /etc/systemd/system/vmess-grpc.service
-
+sed -i $uuid2 /etc/xray/vmess-grpc.json
 
 #json vless wss port 14016
 wget -O /etc/xray/vless-ws.json https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/hide-xray/vless-ws.json && chmod +x /etc/xray/vless-ws.json
 wget -O /etc/systemd/system/vless-ws.service https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/hide-xray/service/vless-ws.service && chmod +x /etc/systemd/system/vless-ws.service
+sed -i $uuid2 /etc/xray/vless-ws.json
 
 #json vless gprc port 24456
 wget -O /etc/xray/vless-grpc.json https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/hide-xray/vless-grpc.json && chmod +x /etc/xray/vless-grpc.json
 wget -O /etc/systemd/system/vless-grpc.service https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/hide-xray/service/vless-grpc.service && chmod +x /etc/systemd/system/vless-grpc.service
+sed -i $uuid2 /etc/xray/vless-grpc.json
 
 #json trojan wss port 25432
 wget -O /etc/xray/trojan-ws.json https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/hide-xray/trojan-ws.json && chmod +x /etc/xray/trojan-ws.json
 wget -O /etc/systemd/system/trojan-ws.service https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/hide-xray/service/trojan-ws.service && chmod +x /etc/systemd/system/trojan-ws.service
+sed -i $uuid2 /etc/xray/trojan-ws.json
 
 #json trojan gprc port 33456
 wget -O /etc/xray/trojan-grpc.json https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/hide-xray/trojan-grpc.json && chmod +x /etc/xray/trojan-grpc.json
 wget -O /etc/systemd/system/trojan-grpc.service https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/hide-xray/service/trojan-grpc.service && chmod +x /etc/systemd/system/trojan-grpc.service
+sed -i $uuid2 /etc/xray/trojan-grpc.json 
 
 #json shadowsoks wss port 30300
 wget -O /etc/xray/shadowsocks-ws.json https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/hide-xray/shadowsocks-ws.json && chmod +x /etc/xray/shadowsocks-ws.json
 wget -O /etc/systemd/system/shadowsocks-ws.service https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/hide-xray/service/shadowsocks-ws.service && chmod +x /etc/systemd/system/shadowsocks-ws.service
+sed -i $uuid2 /etc/xray/shadowsocks-ws.json 
 
 #json shadowsoks gprc port 30310
 wget -O /etc/xray/shadowsocks-grpc.json https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/hide-xray/shadowsocks-grpc.json && chmod +x /etc/xray/shadowsocks-grpc.json
 wget -O /etc/systemd/system/shadowsocks-grpc.service https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/hide-xray/service/shadowsocks-grpc.service && chmod +x /etc/systemd/system/shadowsocks-grpc.service
-
+sed -i $uuid2 /etc/xray/shadowsocks-grpc.json 
 
 rm - rf / etc / systemd / system / xray.service.d
 rm - rf / etc / systemd / system / xray @.service
