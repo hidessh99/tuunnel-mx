@@ -17,7 +17,7 @@
         "settings": {
             "clients": [{
                 "method": "aes-128-gcm",
-                "password": "${uuid}"
+                "password": "xxxxxxxxx"
             }],
             "network": "tcp,udp"
         },
