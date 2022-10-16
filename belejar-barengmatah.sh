@@ -70,7 +70,7 @@ sleep 2
 clear
 
 
-wget https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/xray/belajar-xray.sh && chmod +x belajar-xray.sh && ./belajar-xray.sh
+wget https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/xray/xray-tutor.sh && chmod +x xray-tutor.sh && ./xray-tutor.sh 
 wget https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 
 
