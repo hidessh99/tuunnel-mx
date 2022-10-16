@@ -124,22 +124,6 @@ rm - rf / etc / systemd / system / xray.service.d
 rm - rf / etc / systemd / system / xray @.service
 
 
-cat > /etc/systemd / system / runn.service << EOF[Unit]
-Description = Mantap - Sayang
-After = network.target
-
-[Service]
-Type = simple
-ExecStartPre = -/usr/bin / mkdir - p /
-    var / run / xray
-ExecStart = /usr/bin / chown www - data: www - data /
-    var / run / xray
-Restart = on - abort
-
-[Install]
-WantedBy = multi - user.target
-EOF
-
 # nginx config
 cat > /etc/nginx / conf.d / xray.conf << EOF
 server {
@@ -155,6 +139,7 @@ server {
     root / home / vps / public_html;
 }
 EOF
+
 sed - i '$ ilocation = /hidessh-vless' / etc / nginx / conf.d / xray.conf
 sed - i '$ i{' / etc / nginx / conf.d / xray.conf
 sed - i '$ iproxy_redirect off;' / etc / nginx / conf.d / xray.conf
@@ -259,8 +244,7 @@ systemctl daemin - reload
 systemctl enable xray
 systemctl restart xray
 systemctl restart nginx
-systemctl enable runn
-systemctl restart runn
+
 
 sleep 1
 yellow() {
