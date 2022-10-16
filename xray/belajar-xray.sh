@@ -85,10 +85,13 @@ fi
 
 mkdir - p / home / vps / public_html
 
+# set uuid
+uuid = $(cat / proc / sys / kernel / random / uuid)# xray config
 
 #json vmess wss port 23456
 wget -O /etc/xray/vmess-ws.json https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/hide-xray/vmess-ws.json && chmod +x /etc/xray/vmess-ws.json
 wget -O /etc/systemd/system/vmess-ws.service https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/hide-xray/service/vmess-ws.service && chmod +x /etc/systemd/system/vmess-ws.service
+
 
 #json vmess gprc port 31234
 wget -O /etc/xray/vmess-grpc.json https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/hide-xray/vmess-grpc.json && chmod +x /etc/xray/vmess-grpc.json
