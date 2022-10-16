@@ -16,7 +16,7 @@
         "protocol": "vmess",
         "settings": {
             "clients": [{
-                "id": "${uuid}",
+                "id": "xxxxxxxxx",
                 "alterId": 0
             }]
         },
