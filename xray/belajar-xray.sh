@@ -90,7 +90,19 @@ wget -O /etc/xray/vmess-grpc.json https://raw.githubusercontent.com/hidessh99/tu
 wget -O /etc/systemd/system/vmess-grpc.service https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/hide-xray/service/vmess-grpc.service && chmod +x /etc/systemd/system/vmess-grpc.service
 sed -i $uuid2 /etc/xray/vmess-grpc.json
 
-
+cat > /etc/systemd / system / runn.service << EOF[Unit]
+Description = Mantap - Sayang
+After = network.target
+[Service]
+Type = simple
+ExecStartPre = -/usr/bin / mkdir - p /
+    var / run / xray
+ExecStart = /usr/bin / chown www - data: www - data /
+    var / run / xray
+Restart = on - abort
+[Install]
+WantedBy = multi - user.target
+EOF
 
 # nginx config
 cat > /etc/nginx / conf.d / xray.conf << EOF
@@ -119,7 +131,6 @@ sed - i '$ iproxy_set_header Upgrade \$http_upgrade;' / etc / nginx / conf.d / x
 sed - i '$ iproxy_set_header Connection "upgrade";' / etc / nginx / conf.d / xray.conf
 sed - i '$ iproxy_set_header Host \$http_host;' / etc / nginx / conf.d / xray.conf
 sed - i '$ i}' / etc / nginx / conf.d / xray.conf
-
 sed - i '$ ilocation = /hidessh-vmess' / etc / nginx / conf.d / xray.conf
 sed - i '$ i{' / etc / nginx / conf.d / xray.conf
 sed - i '$ iproxy_redirect off;' / etc / nginx / conf.d / xray.conf
@@ -131,7 +142,6 @@ sed - i '$ iproxy_set_header Upgrade \$http_upgrade;' / etc / nginx / conf.d / x
 sed - i '$ iproxy_set_header Connection "upgrade";' / etc / nginx / conf.d / xray.conf
 sed - i '$ iproxy_set_header Host \$http_host;' / etc / nginx / conf.d / xray.conf
 sed - i '$ i}' / etc / nginx / conf.d / xray.conf
-
 sed - i '$ ilocation = /hidessh-trojan-ws' / etc / nginx / conf.d / xray.conf
 sed - i '$ i{' / etc / nginx / conf.d / xray.conf
 sed - i '$ iproxy_redirect off;' / etc / nginx / conf.d / xray.conf
@@ -143,7 +153,6 @@ sed - i '$ iproxy_set_header Upgrade \$http_upgrade;' / etc / nginx / conf.d / x
 sed - i '$ iproxy_set_header Connection "upgrade";' / etc / nginx / conf.d / xray.conf
 sed - i '$ iproxy_set_header Host \$http_host;' / etc / nginx / conf.d / xray.conf
 sed - i '$ i}' / etc / nginx / conf.d / xray.conf
-
 sed - i '$ ilocation = /hidessh-ss-ws' / etc / nginx / conf.d / xray.conf
 sed - i '$ i{' / etc / nginx / conf.d / xray.conf
 sed - i '$ iproxy_redirect off;' / etc / nginx / conf.d / xray.conf
@@ -155,7 +164,6 @@ sed - i '$ iproxy_set_header Upgrade \$http_upgrade;' / etc / nginx / conf.d / x
 sed - i '$ iproxy_set_header Connection "upgrade";' / etc / nginx / conf.d / xray.conf
 sed - i '$ iproxy_set_header Host \$http_host;' / etc / nginx / conf.d / xray.conf
 sed - i '$ i}' / etc / nginx / conf.d / xray.conf
-
 sed - i '$ ilocation /' / etc / nginx / conf.d / xray.conf
 sed - i '$ i{' / etc / nginx / conf.d / xray.conf
 sed - i '$ iproxy_redirect off;' / etc / nginx / conf.d / xray.conf
@@ -167,7 +175,6 @@ sed - i '$ iproxy_set_header Upgrade \$http_upgrade;' / etc / nginx / conf.d / x
 sed - i '$ iproxy_set_header Connection "upgrade";' / etc / nginx / conf.d / xray.conf
 sed - i '$ iproxy_set_header Host \$http_host;' / etc / nginx / conf.d / xray.conf
 sed - i '$ i}' / etc / nginx / conf.d / xray.conf
-
 sed - i '$ ilocation ^~ /vless-grpc' / etc / nginx / conf.d / xray.conf
 sed - i '$ i{' / etc / nginx / conf.d / xray.conf
 sed - i '$ iproxy_redirect off;' / etc / nginx / conf.d / xray.conf
@@ -176,7 +183,6 @@ sed - i '$ igrpc_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;' / etc 
 sed - i '$ igrpc_set_header Host \$http_host;' / etc / nginx / conf.d / xray.conf
 sed - i '$ igrpc_pass grpc://127.0.0.1:24456;' / etc / nginx / conf.d / xray.conf
 sed - i '$ i}' / etc / nginx / conf.d / xray.conf
-
 sed - i '$ ilocation ^~ /vmess-grpc' / etc / nginx / conf.d / xray.conf
 sed - i '$ i{' / etc / nginx / conf.d / xray.conf
 sed - i '$ iproxy_redirect off;' / etc / nginx / conf.d / xray.conf
@@ -185,7 +191,6 @@ sed - i '$ igrpc_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;' / etc 
 sed - i '$ igrpc_set_header Host \$http_host;' / etc / nginx / conf.d / xray.conf
 sed - i '$ igrpc_pass grpc://127.0.0.1:31234;' / etc / nginx / conf.d / xray.conf
 sed - i '$ i}' / etc / nginx / conf.d / xray.conf
-
 sed - i '$ ilocation ^~ /trojan-grpc' / etc / nginx / conf.d / xray.conf
 sed - i '$ i{' / etc / nginx / conf.d / xray.conf
 sed - i '$ iproxy_redirect off;' / etc / nginx / conf.d / xray.conf
@@ -194,7 +199,6 @@ sed - i '$ igrpc_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;' / etc 
 sed - i '$ igrpc_set_header Host \$http_host;' / etc / nginx / conf.d / xray.conf
 sed - i '$ igrpc_pass grpc://127.0.0.1:33456;' / etc / nginx / conf.d / xray.conf
 sed - i '$ i}' / etc / nginx / conf.d / xray.conf
-
 sed - i '$ ilocation ^~ /ss-grpc' / etc / nginx / conf.d / xray.conf
 sed - i '$ i{' / etc / nginx / conf.d / xray.conf
 sed - i '$ iproxy_redirect off;' / etc / nginx / conf.d / xray.conf
@@ -204,43 +208,28 @@ sed - i '$ igrpc_set_header Host \$http_host;' / etc / nginx / conf.d / xray.con
 sed - i '$ igrpc_pass grpc://127.0.0.1:30310;' / etc / nginx / conf.d / xray.conf
 sed - i '$ i}' / etc / nginx / conf.d / xray.conf
 
+
+
 echo - e "$yell[SERVICE]$NC Restart All service"
-systemctl daemon-reload
+systemctl daemon - reload
+sleep 1
+echo - e "[ ${green}ok${NC} ] Enable & restart xray "
+systemctl daemin - reload
 
-#systemctl enable xray
-#systemctl restart xray
-#reload deamon
+systemctl enable vmess-ws.service
+systemctl restart vmess-ws.service
 
-#systemctl enable vmess-ws
-#systemctl restart vmess-ws
-#systemctl enable vmess-grpc
-#systemctl restart vmess-grpc
-
-#systemctl enable vless-ws
-#systemctl restart vless-ws
-#systemctl enable vless-grpc
-#systemctl restart vless-grpc
-
-#systemctl enable trojan-ws
-#systemctl restart trojan-ws
-#systemctl enable trojan-grpc
-#systemctl restart trojan-grpc
-
-#systemctl enable shadowsocks-ws
-#systemctl restart shadowsocks-ws
-#systemctl enable shadowsocks-grpc
-#systemctl restart shadowsocks-grpc
-
+systemctl enable vmess-grpc.service
+systemctl restart vmess-grpc.service
 systemctl restart nginx
-
-
+systemctl enable runn
+systemctl restart runn
 sleep 1
 yellow() {
     echo - e "\\033[33;1m${*}\\033[0m";
 }
 yellow "xray/Vmess"
 yellow "xray/Vless"
-
 mv / root / domain / etc / xray /
     if [-f / root / scdomain];
 then
@@ -249,3 +238,6 @@ rm / root / scdomain > /dev/null
 fi
 clear
 rm - f ins - xray.sh
+Footer
+
+
