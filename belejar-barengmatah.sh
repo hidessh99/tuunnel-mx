@@ -85,11 +85,6 @@ wget -q -O /usr/bin/crtv2ray "https://raw.githubusercontent.com/hidessh99/tuunne
 wget -q -O /usr/bin/add-ssws "https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/menu/addss-hide.sh" && chmod +x /usr/bin/add-ssws
 sleep 1
 
-wget -q -O /usr/bin/xray-exp "https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/menu/xray-exp.sh" && chmod +x /usr/bin/xray-exp
-
-cd
-wget https://raw.githubusercontent.com/hidessh99/HIDE-package/main/hidepackage.sh && chmod +x hidepackage.sh && ./hidepackage.sh
-
 echo "------------------------------------------------------------"
 echo ""
 echo ""
