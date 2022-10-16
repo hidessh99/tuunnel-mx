@@ -250,8 +250,31 @@ systemctl daemon - reload
 sleep 1
 echo - e "[ ${green}ok${NC} ] Enable & restart xray "
 systemctl daemin - reload
-systemctl enable xray
-systemctl restart xray
+
+#systemctl enable xray
+#systemctl restart xray
+#reload deamon
+
+systemctl enable vmess-ws
+systemctl restart vmess-ws
+systemctl enable vmess-grpc
+systemctl restart vmess-grpc
+
+systemctl enable vless-ws
+systemctl restart vless-ws
+systemctl enable vless-grpc
+systemctl restart vless-grpc
+
+systemctl enable trojan-ws
+systemctl restart trojan-ws
+systemctl enable trojan-grpc
+systemctl restart trojan-grpc
+
+systemctl enable shadowsocks-ws
+systemctl restart shadowsocks-ws
+systemctl enable shadowsocks-grpc
+systemctl restart shadowsocks-grpc
+
 systemctl restart nginx
 
 
