@@ -86,6 +86,12 @@ cat > /etc/xray/config.json << END
     "error": "/var/log/xray/error.log",
     "loglevel": "warning"
   },
+  "dns": {
+        "servers": [
+            "8.8.8.8",
+            "8.8.4.4"
+        ]
+  },
   "inbounds": [
       {
       "listen": "127.0.0.1",
