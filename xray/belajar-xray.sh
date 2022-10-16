@@ -107,7 +107,7 @@ wget -O /etc/systemd/system/vless-grpc.service https://raw.githubusercontent.com
 wget -O /etc/xray/trojan-ws.json https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/hide-xray/trojan-ws.json && chmod +x /etc/xray/trojan-ws.json
 wget -O /etc/systemd/system/trojan-ws.service https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/hide-xray/service/trojan-ws.service && chmod +x /etc/systemd/system/trojan-ws.service
 
-#json trojan gprc port 24456
+#json trojan gprc port 33456
 wget -O /etc/xray/trojan-grpc.json https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/hide-xray/trojan-grpc.json && chmod +x /etc/xray/trojan-grpc.json
 wget -O /etc/systemd/system/trojan-grpc.service https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/hide-xray/service/trojan-grpc.service && chmod +x /etc/systemd/system/trojan-grpc.service
 
