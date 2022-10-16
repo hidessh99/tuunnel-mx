@@ -16,7 +16,7 @@
         "protocol": "trojan",
         "settings": {
             "clients": [{
-                "password": "${uuid}",
+                "password": "xxxxxxxxx",
                 "flow": "xtls-rprx-direct",
             }],
             "decryption": "none",
