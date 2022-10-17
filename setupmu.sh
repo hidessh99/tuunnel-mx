@@ -96,7 +96,7 @@ wget -q -O /usr/bin/cek-user "https://raw.githubusercontent.com/hidessh99/tuunne
 wget -q -O /usr/bin/renew-user "https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/xray/renew-ws.sh" && chmod +x /usr/bin/renew-user
 wget -q -O /usr/bin/crtv2ray "https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/xray/crt.sh" && chmod +x /usr/bin/crtv2ray
 
-
+#expired account allserver ujicoba
 wget -q -O /usr/bin/exp "https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/ssh/xp.sh" && chmod +x /usr/bin/exp
 
 sleep 1
