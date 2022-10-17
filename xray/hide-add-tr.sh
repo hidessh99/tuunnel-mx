@@ -45,7 +45,7 @@ sed -i '/#trojangrpc$/a\#! '"$user $exp"'\
 },{"password": "'""$uuid""'","email": "'""$user""'"' /etc/xray/config.json
 
 systemctl restart xray
-trojanlink1="trojan://${uuid}@${domain}:${tr}?mode=gun&security=tls&type=grpc&serviceName=trojan-grpc&sni=google.com#${user}"
+trojanlink1="trojan://${uuid}@${domain}:${tr}?mode=gun&security=tls&type=grpc&serviceName=hidessh-trojan-grpc&sni=google.com#${user}"
 trojanlink="trojan://${uuid}@${domain}:${tr}?path=%2Fhidessh-trojan-ws&security=tls&host=bug.com&type=ws&sni=google.com#${user}"
 clear
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
@@ -55,7 +55,7 @@ echo -e "Remarks : ${user}" | tee -a /etc/log-create-user.log
 echo -e "Host/IP : ${domain}" | tee -a /etc/log-create-user.log
 echo -e "port : ${tr}" | tee -a /etc/log-create-user.log
 echo -e "Key : ${uuid}" | tee -a /etc/log-create-user.log
-echo -e "Path : /trojan-ws" | tee -a /etc/log-create-user.log
+echo -e "Path : /hidessh-trojan-ws" | tee -a /etc/log-create-user.log
 echo -e "ServiceName : trojan-grpc" | tee -a /etc/log-create-user.log
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo -e "Link WS : ${trojanlink}" | tee -a /etc/log-create-user.log
