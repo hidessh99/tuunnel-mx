@@ -202,9 +202,9 @@ cat >/etc/nginx/conf.d/xray.conf <<EOF
 server {
         listen 81;
         listen [::]:81;
-        server_name vip380.hidesvr.xyz;
+        server_name $domain;
         # shellcheck disable=SC2154
-        return 301 https://sg1.funny.my.id;
+        return 301 $domain;
 }
 server {
                 listen 127.0.0.1:31300;
@@ -213,7 +213,7 @@ server {
 }
 server {
         listen 127.0.0.1:31302 http2;
-        server_name vip380.hidesvr.xyz;
+        server_name $domain;
         root /usr/share/nginx/html;
         location /s/ {
                 add_header Content-Type text/plain;
@@ -255,7 +255,7 @@ server {
 }
 server {
         listen 127.0.0.1:31300;
-        server_name vip380.hidesvr.xyz;
+        server_name $domain;
         root /usr/share/nginx/html;
         location /s/ {
                 add_header Content-Type text/plain;
