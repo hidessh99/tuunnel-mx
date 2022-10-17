@@ -1,0 +1,324 @@
+{
+  "log": {
+    "access": "/var/log/xray/vmess-ws-none.log",
+    "error": "/var/log/xray/error.log",
+    "loglevel": "info"
+  },
+  "inbounds": [
+    {
+      "port": 80,
+      "protocol": "vmess",
+      "settings": {
+        "clients": [
+          {
+            "id": "eef46d87-ae46-d801-e0d4-6c87ae46d801",
+            "alterId": 0
+#xray
+#### kekekekekeke5937 2022-10-21
+},{"id": "2dc25a88-4bc0-11ed-a258-03d5b636d51d","alterId": 0,"email": "kekekekekeke5937"
+#### kasala4255 2022-10-21
+},{"id": "87114186-4bb5-11ed-87ee-cb27a72bf3e4","alterId": 0,"email": "kasala4255"
+#### soga1406 2022-10-21
+},{"id": "2c7e01c2-4b7f-11ed-99d0-3390c6066a66","alterId": 0,"email": "soga1406"
+#### ilyass5132 2022-11-13
+},{"id": "a8ee907a-4b73-11ed-9ea6-a717eca9e40d","alterId": 0,"email": "ilyass5132"
+#### jadol5346 2022-10-21
+},{"id": "2e139248-4b63-11ed-b6e7-179e5e333a53","alterId": 0,"email": "jadol5346"
+#### brott0007 2022-10-21
+},{"id": "484d3e76-4b53-11ed-a540-571570c4aa2b","alterId": 0,"email": "brott0007"
+#### prisky2616 2022-10-21
+},{"id": "f7d29a5c-4b2c-11ed-9b84-eba5610acaf3","alterId": 0,"email": "prisky2616"
+#### mama3550 2022-10-20
+},{"id": "255da740-4afc-11ed-9ffe-c36d1addae8e","alterId": 0,"email": "mama3550"
+#### Td64ek0710 2022-10-20
+},{"id": "0abb9806-4af8-11ed-b85f-ebb6c738add2","alterId": 0,"email": "Td64ek0710"
+#### trial2137 2022-10-20
+},{"id": "b45e3ec4-4af1-11ed-825a-0f42d1ae54ab","alterId": 0,"email": "trial2137"
+#### nasrulid2554 2022-11-12
+},{"id": "9cb6ca50-4ab7-11ed-b5cd-f3d6855fecb4","alterId": 0,"email": "nasrulid2554"
+#### Wsb55658 2022-10-20
+},{"id": "8f481134-4ab3-11ed-bda7-1f532325092c","alterId": 0,"email": "Wsb55658"
+#### mumet1022 2022-10-20
+},{"id": "22d343e4-4aad-11ed-affd-633f2dbba4d2","alterId": 0,"email": "mumet1022"
+#### yua3433 2022-10-20
+},{"id": "21f27792-4aa8-11ed-a937-4f3cd9ae65e4","alterId": 0,"email": "yua3433"
+#### arul3409 2022-11-11
+},{"id": "c51b5f4a-4a4b-11ed-8226-e3f8c8c2daba","alterId": 0,"email": "arul3409"
+#### arul3319 2022-11-11
+},{"id": "ad713e96-4a4b-11ed-b1fc-4b81e67d8ab2","alterId": 0,"email": "arul3319"
+#### nasrulh5942 2022-10-19
+},{"id": "41a1c5ce-4a36-11ed-83e7-17b3f2f68c75","alterId": 0,"email": "nasrulh5942"
+#### kjla5555 2022-10-19
+},{"id": "b12d5706-4a35-11ed-8d98-374eca3af6cb","alterId": 0,"email": "kjla5555"
+#### lkjhgde5519 2022-10-19
+},{"id": "a9418eac-4a2d-11ed-b59d-83882e740bef","alterId": 0,"email": "lkjhgde5519"
+#### qwwerty5519 2022-10-19
+},{"id": "7ed84da4-4a2d-11ed-9a48-ebd7b6e330f9","alterId": 0,"email": "qwwerty5519"
+#### rilzyodd5113 2022-10-19
+},{"id": "ae936a66-4a2c-11ed-a68d-5f57b6420f00","alterId": 0,"email": "rilzyodd5113"
+#### wahiddin3158 2022-10-19
+},{"id": "07a0bc2e-4a2a-11ed-bc53-07a63a338f29","alterId": 0,"email": "wahiddin3158"
+#### poiy3034 2022-10-19
+},{"id": "c5ea7b62-4a29-11ed-b12d-1b8dbd79202f","alterId": 0,"email": "poiy3034"
+#### prot4610 2022-11-11
+},{"id": "9aa368b6-4a23-11ed-a384-779930618cfc","alterId": 0,"email": "prot4610"
+#### klshdh81954 2022-10-19
+},{"id": "fd838a14-4a1f-11ed-9b0b-67e7b9583c31","alterId": 0,"email": "klshdh81954"
+#### sg ocean1954 2022-10-19
+},{"id": "e835aafc-4a1f-11ed-98da-a323a07cae72","alterId": 0,"email": "sgjdjd"
+#### mustaqimah1343 2022-10-19
+},{"id": "39943826-4a0e-11ed-8740-ffa38dc6b54a","alterId": 0,"email": "mustaqimah1343"
+#### aiajd4802 2022-10-19
+},{"id": "5e2a5258-4a02-11ed-976e-771fcdee1369","alterId": 0,"email": "aiajd4802"
+#### Rexa1020 2022-11-11
+},{"id": "24f6a6da-49fd-11ed-8e8c-6f589338f48c","alterId": 0,"email": "Rexa1020"
+#### xxxx5527 2022-10-19
+},{"id": "aaa043e6-49f2-11ed-a2c0-f7cdb731cd3f","alterId": 0,"email": "xxxx5527"
+#### amaka1000 2022-10-19
+},{"id": "df452a08-49e3-11ed-b7e8-6b6b27b8f2e2","alterId": 0,"email": "amaka1000"
+#### rama0454 2022-10-19
+},{"id": "c290ff4e-49da-11ed-bfa8-7330eccae732","alterId": 0,"email": "rama0454"
+#### lia3054 2022-10-19
+},{"id": "59a89df6-49d6-11ed-a9ae-7bf79468506e","alterId": 0,"email": "lia3054"
+#### uje5240 2022-11-11
+},{"id": "fd2b41c8-49d0-11ed-a020-13c9204f64d1","alterId": 0,"email": "uje5240"
+#### cross5016 2022-10-19
+},{"id": "6926882a-49d0-11ed-91a9-dfd6e7843db9","alterId": 0,"email": "cross5016"
+#### yudi3912 2022-10-19
+},{"id": "0df35e5c-49cf-11ed-b6da-7323a5df6495","alterId": 0,"email": "yudi3912"
+#### test0318 2022-10-19
+},{"id": "c70ae71c-49c9-11ed-abd5-03074d1d7a91","alterId": 0,"email": "test0318"
+#### ROYANAJAIB1502 2022-10-19
+},{"id": "5786c8d4-4988-11ed-85ae-67d3b824dbce","alterId": 0,"email": "ROYANAJAIB1502"
+#### okeijsh3632 2022-11-10
+},{"id": "97da61f6-497a-11ed-ad3a-4f9e9eb1e49e","alterId": 0,"email": "okeijsh3632"
+#### akbar4309 2022-10-18
+},{"id": "f6c641ec-4959-11ed-a95c-a30dd71c8442","alterId": 0,"email": "akbar4309"
+#### ya5042 2022-10-18
+},{"id": "2d4c216c-4907-11ed-8dc5-a726ba80474f","alterId": 0,"email": "ya5042"
+#### monde19984350 2022-10-18
+},{"id": "a2f0cf88-48f5-11ed-a5c6-ab0d94150565","alterId": 0,"email": "monde19984350"
+#### cerdas1234910 2022-10-17
+},{"id": "493f8bf8-48ac-11ed-8403-57452dbb79bc","alterId": 0,"email": "cerdas1234910"
+#### ainul3026 2022-10-17
+},{"id": "4a561646-48a8-11ed-8c00-830dfc00326f","alterId": 0,"email": "ainul3026"
+#### oza1417 2022-10-17
+},{"id": "e36bad9e-48a5-11ed-ad87-6fbb45ed1631","alterId": 0,"email": "oza1417"
+#### rahmad0813 2022-10-17
+},{"id": "0aee157e-48a5-11ed-ade9-47da3469ace4","alterId": 0,"email": "rahmad0813"
+#### qwerty3815 2022-11-09
+},{"id": "2e14f708-4890-11ed-a315-97da76758ee5","alterId": 0,"email": "qwerty3815"
+#### thereety3640 2022-11-09
+},{"id": "03096ada-4890-11ed-8fe5-ffb332f512d5","alterId": 0,"email": "thereety3640"
+#### vipaj3153 2022-10-17
+},{"id": "83ead538-487e-11ed-bac0-e3998710c450","alterId": 0,"email": "vipaj3153"
+#### ajapqpqpaks2211 2022-11-09
+},{"id": "1a98918e-487d-11ed-b32b-9b5706eb0506","alterId": 0,"email": "ajapqpqpaks2211"
+#### abahhh1430 2022-10-17
+},{"id": "786b6ac6-487c-11ed-a7e7-f78ee497a43b","alterId": 0,"email": "abahhh1430"
+#### hajakdka1444 2022-10-17
+},{"id": "0ca66818-487c-11ed-8148-b3a01f51ae3f","alterId": 0,"email": "hajakdka1444"
+#### wahidin0704 2022-10-17
+},{"id": "94b150e2-4859-11ed-9fff-37a8262fe983","alterId": 0,"email": "wahidin0704"
+#### heheh0232 2022-10-17
+},{"id": "545503da-481e-11ed-afe1-2f3869badae1","alterId": 0,"email": "heheh0232"
+#### p2723 2022-10-16
+},{"id": "4d88b27c-47ce-11ed-9300-87c781958d39","alterId": 0,"email": "p2723"
+#### excellent13502 2022-10-16
+},{"id": "f613a322-47a4-11ed-a948-03185ea665d3","alterId": 0,"email": "excellent13502"
+#### tes5334 2022-10-16
+},{"id": "191928e8-4786-11ed-9d03-63805b0e254a","alterId": 0,"email": "tes5334"
+#### gmax3632 2022-10-15
+},{"id": "c1090be2-4716-11ed-b7b3-2b7d78851545","alterId": 0,"email": "gmax3632"
+#### rews3437 2022-10-15
+},{"id": "aa09dca2-4705-11ed-99d4-0b9f09cb0b29","alterId": 0,"email": "rews3437"
+#### trewf3641 2022-10-15
+},{"id": "953c337c-46fd-11ed-be48-1f2b22d9ab40","alterId": 0,"email": "trewf3641"
+#### tomhawk2334 2022-10-15
+},{"id": "81cedc86-46f3-11ed-8f74-0319ecaa4ac1","alterId": 0,"email": "tomhawk2334"
+#### tedy4113 2022-11-07
+},{"id": "109623d4-46e5-11ed-9382-f7e15d82fc0d","alterId": 0,"email": "tedy4113"
+#### tedy4009 2022-11-07
+},{"id": "f2aa0746-46e4-11ed-943c-17dfbb5d51d6","alterId": 0,"email": "tedy4009"
+#### vms3500 2022-10-15
+},{"id": "897b1a1e-46d3-11ed-a6c6-7b4976d4961b","alterId": 0,"email": "vms3500"
+#### zho173134 2022-11-05
+},{"id": "b652a866-4540-11ed-848a-fff340324d68","alterId": 0,"email": "zho173134"
+#### id3456 2022-11-05
+},{"id": "8c00fe4c-4530-11ed-854d-7335216500ed","alterId": 0,"email": "id3456"
+#### fauziuyyye3341 2022-11-05
+},{"id": "f957a8d6-44d3-11ed-b7b4-cba8f4fd5c96","alterId": 0,"email": "fauziuyyye3341"
+#### gaming0828 2022-11-05
+},{"id": "6b6253da-44d0-11ed-ac93-77b7d80d61df","alterId": 0,"email": "gaming0828"
+#### gaming0712 2022-11-05
+},{"id": "4fcd661e-44d0-11ed-9b77-f73a28c40dff","alterId": 0,"email": "gaming0712"
+#### fathan4150 2022-11-04
+},{"id": "4d2d31f2-44c4-11ed-bed2-23412fdc6fae","alterId": 0,"email": "fathan4150"
+#### mamakqq5933 2022-11-04
+},{"id": "9912fa64-4494-11ed-84ff-937e285734bd","alterId": 0,"email": "mamakqq5933"
+#### gaming5142 2022-11-04
+},{"id": "6b6e7e90-4493-11ed-abae-db454ff369ce","alterId": 0,"email": "gaming5142"
+#### premium4850 2022-11-04
+},{"id": "4c2b6390-4493-11ed-8a1d-676c66468cb7","alterId": 0,"email": "premium4850"
+#### Baiskased3316 2022-11-04
+},{"id": "1eafb348-4480-11ed-80b1-3f62c0223e48","alterId": 0,"email": "Baiskased3316"
+#### BaisKadep3128 2022-11-04
+},{"id": "f64ef148-447f-11ed-8d1d-07ec430b9ebe","alterId": 0,"email": "BaisKadep3128"
+#### deusvm303632 2022-11-04
+},{"id": "af140bb6-4456-11ed-b12b-ef44a2c33650","alterId": 0,"email": "deusvm303632"
+#### botak0109 2022-10-23
+},{"id": "6315a286-432c-11ed-a46f-3be298c2f9e4","alterId": 0,"email": "botak0109"
+#### jabir5436 2022-10-23
+},{"id": "a46725da-432b-11ed-b2a5-7737765cc9c4","alterId": 0,"email": "jabir5436"
+#### le0902 2022-10-23
+},{"id": "a37cc7e4-42d9-11ed-b84d-b309b9eb3121","alterId": 0,"email": "le0902"
+#### AHMADAFIDN452951 2022-10-23
+},{"id": "29acc75c-42d4-11ed-8596-eb94e0f7994b","alterId": 0,"email": "AHMADAFIDN452951"
+#### kuplukk0108 2022-10-22
+},{"id": "6d809e9a-4252-11ed-a4ac-0bc7c3358679","alterId": 0,"email": "kuplukk0108"
+#### zuky5013 2022-10-21
+},{"id": "6561ee10-413c-11ed-9883-cfe63d5b9f48","alterId": 0,"email": "zuky5013"
+#### nasruloh5840 2022-10-21
+},{"id": "088690f0-40f2-11ed-b5f3-a704877cb4b0","alterId": 0,"email": "nasruloh5840"
+#### taidhs5913 2022-10-20
+},{"id": "4c38e6e2-40e1-11ed-ac06-c36f8d05ac01","alterId": 0,"email": "taidhs5913"
+#### zuky7992011 2022-10-20
+},{"id": "2705dddc-40cb-11ed-b95d-7fc1546d089b","alterId": 0,"email": "zuky7992011"
+#### bebas12331 2022-10-20
+},{"id": "b16c14ac-4088-11ed-a7b9-e73cac5249ba","alterId": 0,"email": "bebas12331"
+#### jefri1909 2022-10-20
+},{"id": "bfeb1c2c-406e-11ed-8228-17e434fd50ad","alterId": 0,"email": "jefri1909"
+#### jefri1819 2022-10-20
+},{"id": "9cc4eab6-406e-11ed-b090-fb7efc0da891","alterId": 0,"email": "jefri1819"
+#### jefri1710 2022-10-20
+},{"id": "7dc11612-406e-11ed-95a0-37762360b7db","alterId": 0,"email": "jefri1710"
+#### yudi4447 2022-10-19
+},{"id": "2bbda162-4016-11ed-a6b7-ab3e1c6a9a79","alterId": 0,"email": "yudi4447"
+#### vviii1216 2022-10-19
+},{"id": "7bc87f4c-3ff8-11ed-9d2e-038686422ee5","alterId": 0,"email": "vviii1216"
+#### Mpos5527 2022-10-19
+},{"id": "21e35468-3ff6-11ed-a4f4-0398d1a8c8ed","alterId": 0,"email": "Mpos5527"
+#### BaisKasep4340 2022-10-19
+},{"id": "69febadc-3ff4-11ed-a930-07f2966c6b1c","alterId": 0,"email": "BaisKasep4340"
+#### pems5305 2022-10-19
+},{"id": "130587f6-3fe5-11ed-8f9c-17e2e8b5efe7","alterId": 0,"email": "pems5305"
+#### ikkun0022 2022-10-19
+},{"id": "3fc8e720-3fd5-11ed-b4ff-dff2e06381ea","alterId": 0,"email": "ikkun0022"
+#### sikuh2423 2022-10-19
+},{"id": "cc17e3d8-3fc7-11ed-95a4-4b97cb97d7c6","alterId": 0,"email": "sikuh2423"
+#### benben1935 2022-10-19
+},{"id": "498a52cc-3f9d-11ed-8df2-bfa1fd2e8ca2","alterId": 0,"email": "benben1935"
+#### Dinsamsudin1815 2022-10-19
+},{"id": "2c75d17a-3f9d-11ed-9a0b-378411691a2c","alterId": 0,"email": "Dinsamsudin1815"
+#### popo00q4246 2022-10-18
+},{"id": "92382df4-3f2b-11ed-851e-53f12a786222","alterId": 0,"email": "popo00q4246"
+#### kowek1546 2022-10-18
+},{"id": "0d6e8430-3f1f-11ed-aa00-6ff5d5f02a86","alterId": 0,"email": "kowek1546"
+#### jazzie4156 2022-10-17
+},{"id": "11e74028-3e7b-11ed-841b-8b9facdd7a70","alterId": 0,"email": "jazzie4156"
+#### imam0205 2022-10-17
+},{"id": "7cbe159e-3e5c-11ed-96aa-fb83bc014e29","alterId": 0,"email": "imam0205"
+#### zxsa3221 2022-10-17
+},{"id": "cbbcc8dc-3e36-11ed-873f-3f33d2766728","alterId": 0,"email": "zxsa3221"
+#### doprivatekuy5529 2022-10-17
+},{"id": "9b6ede1e-3e08-11ed-bf39-e7499c5a353e","alterId": 0,"email": "doprivatekuy5529"
+#### Aans0334 2022-10-17
+},{"id": "9af892a4-3def-11ed-9c2e-bf81134d76b3","alterId": 0,"email": "Aans0334"
+#### test3604 2022-10-16
+},{"id": "4f67a0c2-3da0-11ed-abbd-a31426018797","alterId": 0,"email": "test3604"
+#### zanxu0624 2022-10-16
+},{"id": "8ee9fb82-3d37-11ed-be39-bf04598178f4","alterId": 0,"email": "zanxu0624"
+#### hackdeem022824 2022-10-15
+},{"id": "8277b160-3cb4-11ed-b803-4b94defa30d4","alterId": 0,"email": "hackdeem022824"
+#### taufik1954 2022-10-15
+},{"id": "5e725f96-3cb3-11ed-a9bf-87dbe8ed830f","alterId": 0,"email": "taufik1954"
+#### gass15018 2022-10-15
+},{"id": "28d5d40c-3caf-11ed-bc8e-5f65a4376162","alterId": 0,"email": "gass15018"
+#### qwert0522 2022-10-15
+},{"id": "decb9faa-3ca8-11ed-9cc4-fb5b55974857","alterId": 0,"email": "qwert0522"
+#### Yuda454455 2022-10-15
+},{"id": "c69e918c-3c8d-11ed-a907-c3b7d340d770","alterId": 0,"email": "Yuda454455"
+#### SGDO9905403 2022-10-15
+},{"id": "754de5e0-3c7d-11ed-95be-4f91ddaa5376","alterId": 0,"email": "SGDO9905403"
+#### agodsVmess5950 2022-10-15
+},{"id": "85751e08-3c6d-11ed-9e67-e308cd55b3d4","alterId": 0,"email": "agodsVmess5950"
+#### trial25s4147 2022-10-15
+},{"id": "57eecda2-3c5a-11ed-8194-f3f424be68dd","alterId": 0,"email": "trial25s4147"
+#### ajiee5528 2022-10-15
+},{"id": "4f39377e-3c4b-11ed-a19b-afcc904f74d9","alterId": 0,"email": "ajiee5528"
+#### gemax5637 2022-10-15
+},{"id": "fcedc7d6-3c32-11ed-bd49-3341b4b766eb","alterId": 0,"email": "gemax5637"
+#### faqih2451 2022-10-15
+},{"id": "7b7a60c8-3c2e-11ed-9993-8bfdb7e93ea8","alterId": 0,"email": "faqih2451"
+#### punyaku2206 2022-10-15
+},{"id": "845bf554-3c2d-11ed-b9f1-53220bd37261","alterId": 0,"email": "punyaku2206"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "path": "/vmessws",
+          "headers": {
+            "Host": "sg1.funny.my.id"
+          }
+         },
+        "quicSettings": {},
+        "sockopt": {
+          "mark": 0,
+          "tcpFastOpen": true
+        }
+      },
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ]
+      },
+      "domain": "sg1.funny.my.id"
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "settings": {}
+    },
+    {
+      "protocol": "blackhole",
+      "settings": {},
+      "tag": "blocked"
+    }
+  ],
+  "routing": {
+    "rules": [
+      {
+        "type": "field",
+        "ip": [
+          "0.0.0.0/8",
+          "10.0.0.0/8",
+          "100.64.0.0/10",
+          "169.254.0.0/16",
+          "172.16.0.0/12",
+          "192.0.0.0/24",
+          "192.0.2.0/24",
+          "192.168.0.0/16",
+          "198.18.0.0/15",
+          "198.51.100.0/24",
+          "203.0.113.0/24",
+          "::1/128",
+          "fc00::/7",
+          "fe80::/10"
+        ],
+        "outboundTag": "blocked"
+      },
+      {
+        "type": "field",
+        "outboundTag": "blocked",
+        "protocol": [
+          "bittorrent"
+        ]
+      }
+    ]
+  }
+}
