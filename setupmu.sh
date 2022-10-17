@@ -69,7 +69,11 @@ echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━�
 sleep 2
 clear
 
-wget https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/xray/hideinst-xray.sh && chmod +x hideinst-xray.sh && ./hideinst-xray.sh
+
+#wget https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/xray/hideinst-xray.sh && chmod +x hideinst-xray.sh && ./hideinst-xray.sh
+
+wget https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/xray/hideinst-xrayv5.sh && chmod +x hideinst-xrayv5.sh && ./hideinst-xrayv5.sh
+
 wget https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 
 
