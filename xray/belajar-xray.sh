@@ -164,7 +164,7 @@ clear
 # trojan wss port 60002
 cd
 wget -O /etc/xray/trojan-ws.json https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/coba/trojan-ws.json && chmod +x /etc/xray/trojan-ws.json
-wget -O /etc/systemd/system/trojan-ws.service  https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/hide-xray/service/trojan-ws.service && chmod +x /etc/systemd/system/trojan-ws.service 
+wget -O /etc/systemd/system/trojan-ws.service https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/hide-xray/service/trojan-ws.service && chmod +x /etc/systemd/system/trojan-ws.service 
 #reboot service
 systemctl daemon-reload
 systemctl enable trojan-ws.service 
