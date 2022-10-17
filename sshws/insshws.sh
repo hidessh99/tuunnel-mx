@@ -5,7 +5,7 @@ cd
 apt install python -y
 
 #Install Script Websocket-SSH Python
-#wget -O /usr/local/bin/ws-openssh https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/sshws/openssh-socket.py
+wget -O /usr/local/bin/ws-openssh https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/sshws/openssh-socket.py
 wget -O /usr/local/bin/ws-dropbear https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/sshws/dropbear-ws.py
 wget -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/sshws/ws-stunnel
 #wget -O /usr/local/bin/ws-ovpn https://raw.githubusercontent.com/${GitUser}/test1/${namafolder}/main/ws-ovpn && chmod +x /usr/local/bin/ws-ovpn
@@ -18,7 +18,7 @@ chmod +x /usr/local/bin/ws-stunnel
 
 
 #System OpenSSH Websocket-SSH Python
-#wget -O /etc/systemd/system/ws-openssh.service https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/sshws/service-wsopenssh && chmod +x /etc/systemd/system/ws-openssh.service
+wget -O /etc/systemd/system/ws-openssh.service https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/sshws/service-wsopenssh && chmod +x /etc/systemd/system/ws-openssh.service
 
 #System Dropbear Websocket-SSH Python
 wget -O /etc/systemd/system/ws-dropbear.service https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/sshws/service-wsdropbear && chmod +x /etc/systemd/system/ws-dropbear.service
@@ -32,10 +32,11 @@ wget -O /etc/systemd/system/ws-stunnel.service https://raw.githubusercontent.com
 #restart service
 #
 systemctl daemon-reload
+
 #Enable & Start & Restart ws-openssh service
-#systemctl enable ws-openssh.service
-#systemctl start ws-openssh.service
-#systemctl restart ws-openssh.service
+systemctl enable ws-openssh.service
+systemctl start ws-openssh.service
+systemctl restart ws-openssh.service
 
 #Enable & Start & Restart ws-dropbear service
 systemctl enable ws-dropbear.service
