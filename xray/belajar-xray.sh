@@ -199,7 +199,6 @@ EOF
 
 #nginx config
 cat >/etc/nginx/conf.d/xray.conf <<EOF
-
 server {
         listen 81;
         listen [::]:81;
