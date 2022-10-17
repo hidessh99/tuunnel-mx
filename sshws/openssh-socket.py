@@ -11,7 +11,7 @@ PASS = ''
 # CONST
 BUFLEN = 4096 * 4
 TIMEOUT = 60
-DEFAULT_HOST = '127.0.0.1:88'
+DEFAULT_HOST = '127.0.0.1:200'
 RESPONSE = 'HTTP/1.1 101 WebSocket bye MDX CHANNEL\r\nContent-Length: 104857600000\r\n\r\n'
 
 class Server(threading.Thread):
