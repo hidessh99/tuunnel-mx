@@ -2,6 +2,7 @@
 #installer Websocker tunneling 
 
 cd
+apt install python -y
 
 #Install Script Websocket-SSH Python
 #wget -O /usr/local/bin/ws-openssh https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/sshws/openssh-socket.py
