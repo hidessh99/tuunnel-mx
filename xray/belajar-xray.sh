@@ -183,3 +183,98 @@ systemctl enable trojan-grpc.service
 systemctl start trojan-grpc.service
 systemctl restart trojan-grpc.service
 clear
+
+cat > /etc/systemd/system/runn.service <<EOF
+[Unit]
+Description=Mantap-Sayang
+After=network.target
+[Service]
+Type=simple
+ExecStartPre=-/usr/bin/mkdir -p /var/run/xray
+ExecStart=/usr/bin/chown www-data:www-data /var/run/xray
+Restart=on-abort
+[Install]
+WantedBy=multi-user.target
+EOF
+
+#nginx config
+cat >/etc/nginx/conf.d/xray.conf <<EOF
+
+server {
+        listen 81;
+        listen [::]:81;
+        server_name vip380.hidesvr.xyz;
+        # shellcheck disable=SC2154
+        return 301 https://sg1.funny.my.id;
+}
+server {
+                listen 127.0.0.1:31300;
+                server_name _;
+                return 403;
+}
+server {
+        listen 127.0.0.1:31302 http2;
+        server_name vip380.hidesvr.xyz;
+        root /usr/share/nginx/html;
+        location /s/ {
+                add_header Content-Type text/plain;
+                alias /etc/v2ray-agent/subscribe/;
+       }
+        location /vless-grpc {
+                client_max_body_size 0;
+#               keepalive_time 1071906480m;
+                keepalive_requests 4294967296;
+                client_body_timeout 1071906480m;
+                send_timeout 1071906480m;
+                lingering_close always;
+                grpc_read_timeout 1071906480m;
+                grpc_send_timeout 1071906480m;
+                grpc_pass grpc://127.0.0.1:31301;
+        }
+        location /trojan-grpc {
+                client_max_body_size 0;
+#                # keepalive_time 1071906480m;
+                keepalive_requests 4294967296;
+                client_body_timeout 1071906480m;
+                send_timeout 1071906480m;
+                lingering_close always;
+                grpc_read_timeout 1071906480m;
+                grpc_send_timeout 1071906480m;
+                grpc_pass grpc://127.0.0.1:31304;
+        }
+        location /vmess-grpc {
+                client_max_body_size 0;
+                # keepalive_time 1071906480m;
+                keepalive_requests 4294967296;
+                client_body_timeout 1071906480m;
+                send_timeout 1071906480m;
+                lingering_close always;
+                grpc_read_timeout 1071906480m;
+                grpc_send_timeout 1071906480m;
+                grpc_pass grpc://127.0.0.1:31303;
+        }
+}
+server {
+        listen 127.0.0.1:31300;
+        server_name vip380.hidesvr.xyz;
+        root /usr/share/nginx/html;
+        location /s/ {
+                add_header Content-Type text/plain;
+                alias /etc/v2ray-agent/subscribe/;
+        }
+        location / {
+                add_header Strict-Transport-Security "max-age=15552000; preload" always;
+        }
+}
+EOF
+
+echo -e "$yell[SERVICE]$NC Restart All service"
+systemctl daemon-reload
+sleep 1
+echo -e "[ ${green}ok${NC} ] Enable & restart xray "
+systemctl daemin-reload
+systemctl restart nginx
+systemctl enable runn
+systemctl restart runn
+
+
