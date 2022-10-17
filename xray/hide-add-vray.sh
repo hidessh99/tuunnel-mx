@@ -88,7 +88,7 @@ grpc=`cat<<EOF
       "id": "${uuid}",
       "aid": "0",
       "net": "grpc",
-      "path": "vmess-grpc",
+      "path": "hidessh-vmess-grpc",
       "type": "none",
       "host": "${domain}",
       "tls": "tls"
