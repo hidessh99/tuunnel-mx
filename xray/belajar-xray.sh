@@ -153,7 +153,7 @@ clear
 # trojan tcp port 443
 cd
 wget -O /etc/xray/trojan-tcp.json https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/coba/trojan-tcp.json && chmod +x /etc/xray/trojan-tcp.json
-wget -O /etc/systemd/system/vtrojan-tcp.service https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/hide-xray/service/trojan-tcp.service && chmod +x /etc/systemd/system/trojan-tcp.service
+wget -O /etc/systemd/system/trojan-tcp.service https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/hide-xray/service/trojan-tcp.service && chmod +x /etc/systemd/system/trojan-tcp.service
 #reboot service
 systemctl daemon-reload
 systemctl enable trojan-tcp.service
