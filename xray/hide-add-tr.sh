@@ -40,13 +40,13 @@ uuid=$(cat /proc/sys/kernel/random/uuid)
 read -p "Expired (days): " masaaktif
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 sed -i '/#trojanws$/a\#! '"$user $exp"'\
-},{"password": "'""$uuid""'","email": "'""$user""'"' /etc/xray/config.json
+},{"password": "'""$user""'","email": "'""$user""'"' /etc/xray/config.json
 sed -i '/#trojangrpc$/a\#! '"$user $exp"'\
-},{"password": "'""$uuid""'","email": "'""$user""'"' /etc/xray/config.json
+},{"password": "'""$user""'","email": "'""$user""'"' /etc/xray/config.json
 
 systemctl restart xray
-trojanlink1="trojan://${uuid}@${domain}:${tr}?mode=gun&security=tls&type=grpc&serviceName=hidessh-trojan-grpc&sni=google.com#${user}"
-trojanlink="trojan://${uuid}@${domain}:${tr}?path=%2Fhidessh-trojan-ws&security=tls&host=bug.com&type=ws&sni=google.com#${user}"
+trojanlink1="trojan://${user}@${domain}:${tr}?mode=gun&security=tls&type=grpc&serviceName=hidessh-trojan-grpc&sni=google.com#${user}"
+trojanlink="trojan://${user}@${domain}:${tr}?path=%2Fhidessh-trojan-ws&security=tls&host=${domain}&type=ws&sni=google.com#${user}"
 clear
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo -e "\E[0;41;36m           TROJAN ACCOUNT          \E[0m" | tee -a /etc/log-create-user.log
@@ -54,7 +54,7 @@ echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━�
 echo -e "Remarks : ${user}" | tee -a /etc/log-create-user.log
 echo -e "Host/IP : ${domain}" | tee -a /etc/log-create-user.log
 echo -e "port : ${tr}" | tee -a /etc/log-create-user.log
-echo -e "Key : ${uuid}" | tee -a /etc/log-create-user.log
+echo -e "Key : ${user}" | tee -a /etc/log-create-user.log
 echo -e "Path : /hidessh-trojan-ws" | tee -a /etc/log-create-user.log
 echo -e "ServiceName : trojan-grpc" | tee -a /etc/log-create-user.log
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
@@ -65,6 +65,4 @@ echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━�
 echo -e "Expired On : $exp" | tee -a /etc/log-create-user.log
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo "" | tee -a /etc/log-create-user.log
-read -n 1 -s -r -p "Press any key to back on menu"
 
-menu
