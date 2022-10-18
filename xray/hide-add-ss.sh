@@ -42,10 +42,10 @@ uuid=$(cat /proc/sys/kernel/random/uuid)
 read -p "Expired (days): " masaaktif
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 sed -i '/#ssws$/a\### '"$user $exp"'\
-},{"password": "'""$uuid""'","method": "'""$cipher""'","email": "'""$user""'"' /etc/xray/config.json
+},{"password": "'""$user""'","method": "'""$cipher""'","email": "'""$user""'"' /etc/xray/config.json
 sed -i '/#ssgrpc$/a\### '"$user $exp"'\
-},{"password": "'""$uuid""'","method": "'""$cipher""'","email": "'""$user""'"' /etc/xray/config.json
-echo $cipher:$uuid > /tmp/log
+},{"password": "'""$user""'","method": "'""$cipher""'","email": "'""$user""'"' /etc/xray/config.json
+echo $cipher:$user > /tmp/log
 shadowsocks_base64=$(cat /tmp/log)
 echo -n "${shadowsocks_base64}" | base64 > /tmp/log1
 shadowsocks_base64e=$(cat /tmp/log1)
@@ -105,7 +105,7 @@ cat > /home/vps/public_html/ss-$user.txt <<-END
             "address": "$domain",
             "level": 8,
             "method": "$cipher",
-            "password": "$uuid",
+            "password": "$user",
             "port": 443
           }
         ]
@@ -214,7 +214,7 @@ cat > /home/vps/public_html/ss-$user.txt <<-END
             "address": "$domain",
             "level": 8,
             "method": "$cipher",
-            "password": "$uuid",
+            "password": "$user",
             "port": 443
           }
         ]
@@ -279,7 +279,7 @@ echo -e "Remarks : ${user}" | tee -a /etc/log-create-user.log
 echo -e "Domain : ${domain}" | tee -a /etc/log-create-user.log
 echo -e "Port TLS : ${tls}" | tee -a /etc/log-create-user.log
 echo -e "Port  GRPC : ${tls}" | tee -a /etc/log-create-user.log
-echo -e "Password : ${uuid}" | tee -a /etc/log-create-user.log
+echo -e "Password : ${user}" | tee -a /etc/log-create-user.log
 echo -e "Cipers : aes-128-gcm" | tee -a /etc/log-create-user.log
 echo -e "Network : ws/grpc" | tee -a /etc/log-create-user.log
 echo -e "Path : /hidessh-ss-ws" | tee -a /etc/log-create-user.log
@@ -294,6 +294,3 @@ echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━�
 echo -e "Expired On : $exp" | tee -a /etc/log-create-user.log
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo "" | tee -a /etc/log-create-user.log
-read -n 1 -s -r -p "Press any key to back on menu"
-
-menu
