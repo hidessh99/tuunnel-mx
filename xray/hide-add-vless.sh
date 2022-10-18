@@ -42,12 +42,12 @@ uuid=$(cat /proc/sys/kernel/random/uuid)
 read -p "Expired (days): " masaaktif
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 sed -i '/#vless$/a\#& '"$user $exp"'\
-},{"id": "'""$uuid""'","email": "'""$user""'"' /etc/xray/config.json
+},{"id": "'""$user""'","email": "'""$user""'"' /etc/xray/config.json
 sed -i '/#vlessgrpc$/a\#& '"$user $exp"'\
-},{"id": "'""$uuid""'","email": "'""$user""'"' /etc/xray/config.json
-vlesslink1="vless://${uuid}@${domain}:$tls?path=/hidessh-vless&security=tls&encryption=none&type=ws#${user}"
-vlesslink2="vless://${uuid}@${domain}:$none?path=/hidessh-vless&encryption=none&type=ws#${user}"
-vlesslink3="vless://${uuid}@${domain}:$tls?mode=gun&security=tls&encryption=none&type=grpc&serviceName=hidessh-vless-grpc&sni=google.com#${user}"
+},{"id": "'""$user""'","email": "'""$user""'"' /etc/xray/config.json
+vlesslink1="vless://${user}@${domain}:$tls?path=/hidessh-vless&security=tls&encryption=none&type=ws#${user}"
+vlesslink2="vless://${user}@${domain}:$none?path=/hidessh-vless&encryption=none&type=ws#${user}"
+vlesslink3="vless://${user}@${domain}:$tls?mode=gun&security=tls&encryption=none&type=grpc&serviceName=hidessh-vless-grpc&sni=google.com#${user}"
 systemctl restart xray
 clear
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
@@ -57,7 +57,7 @@ echo -e "Remarks : ${user}" | tee -a /etc/log-create-user.log
 echo -e "Domain : ${domain}" | tee -a /etc/log-create-user.log
 echo -e "port TLS : $tls" | tee -a /etc/log-create-user.log
 echo -e "port none TLS : $none" | tee -a /etc/log-create-user.log
-echo -e "id : ${uuid}" | tee -a /etc/log-create-user.log
+echo -e "id : ${user}" | tee -a /etc/log-create-user.log
 echo -e "Encryption : none" | tee -a /etc/log-create-user.log
 echo -e "Network : ws" | tee -a /etc/log-create-user.log
 echo -e "Path : /hidessh-vless" | tee -a /etc/log-create-user.log
@@ -72,6 +72,3 @@ echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━�
 echo -e "Expired On : $exp" | tee -a /etc/log-create-user.log
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo "" | tee -a /etc/log-create-user.log
-read -n 1 -s -r -p "Press any key to back on menu"
-
-menu
