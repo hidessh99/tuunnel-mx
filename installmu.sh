@@ -52,10 +52,7 @@ echo -e "$green          Install Websocket              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/kenDevXD/multi-ws/main/websocket/insshws.sh && chmod +x insshws.sh && ./insshws.sh
-clear
-wget https://raw.githubusercontent.com/kenDevXD/multi-ws/main/websocket/nontls.sh && chmod +x nontls.sh && ./nontls.sh
-
+wget https://raw.githubusercontent.com/hidessh99/tuunnel-mx/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 sleep 2
 clear
 
