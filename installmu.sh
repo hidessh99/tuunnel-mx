@@ -171,11 +171,6 @@ echo "" | tee -a log-install.txt
 rm /root/setup.sh >/dev/null 2>&1
 rm /root/ins-xray.sh >/dev/null 2>&1
 rm /root/insshws.sh >/dev/null 2>&1
-
-cd
-mkdir /var/lib/scrz-prem/
-touch /var/lib/scrz-prem/ipvps.conf
-
 cd
 rm -rf updatek.sh
 rm -rf dns-cf.sh
